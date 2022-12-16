@@ -9,15 +9,14 @@ pipeline {
         stage('Build') {
             steps {
                 sh '''
-                    make
-                    ./mvnw -Dmaven.test.failure.ignore=true install
+                    ./mvnw clean install -DtestsSkip=true
                 '''
             }
         }
 
         stage('Test') {
             steps {
-                echo 'Testing...'
+                sh './mvnw clean test'
             }
         }
 
