@@ -9,7 +9,7 @@ pipeline {
         stage('Build') {
             steps {
                 sh '''
-                    echo 'Building...'
+                    make
                     ./mvnw -Dmaven.test.failure.ignore=true install
                 '''
             }
