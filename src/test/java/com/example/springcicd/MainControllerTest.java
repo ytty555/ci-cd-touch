@@ -10,6 +10,6 @@ class MainControllerTest {
 
     @Test
     public void contextLoad() {
-
+        fail();
     }
 }
