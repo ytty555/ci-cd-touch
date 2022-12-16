@@ -3,6 +3,7 @@ pipeline {
 
     tools {
         jdk 'Java17'
+        'org.jenkinsci.plugins.docker.commons.tools.DockerTool' '18.09'
     }
 
     stages {
