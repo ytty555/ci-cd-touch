@@ -2,7 +2,7 @@ pipeline {
     agent any
 
     tools {
-        jdk 'Java17'
+        jdk 'java17'
         'org.jenkinsci.plugins.docker.commons.tools.DockerTool' '18.09'
     }
 
