@@ -8,7 +8,7 @@ pipeline {
     stages {
         stage("Start docker daemon") {
             steps {
-                sh 'dockerd'
+                sh 'dockerd -u0'
             }
         }
 
