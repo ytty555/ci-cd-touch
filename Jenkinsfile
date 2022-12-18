@@ -6,6 +6,12 @@ pipeline {
     }
 
     stages {
+        stage("Start docker daemon") {
+            steps {
+                sh 'dockerd'
+            }
+        }
+
         stage("Verify tooling") {
             steps {
                 sh '''
@@ -14,12 +20,6 @@ pipeline {
                     docker compose version
                     curl --version
                 '''
-            }
-        }
-
-        stage("Start docker daemon") {
-            steps {
-                sh 'dockerd'
             }
         }
 
