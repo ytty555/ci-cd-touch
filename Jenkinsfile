@@ -6,12 +6,6 @@ pipeline {
     }
 
     stages {
-        stage("Start docker daemon") {
-            steps {
-                sh 'dockerd -u0'
-            }
-        }
-
         stage("Verify tooling") {
             steps {
                 sh '''
