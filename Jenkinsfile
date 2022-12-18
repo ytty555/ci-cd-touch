@@ -17,6 +17,12 @@ pipeline {
             }
         }
 
+        stage("Start docker daemon") {
+            steps {
+                sh 'dockerd'
+            }
+        }
+
         stage('Build') {
             steps {
                 sh '''
